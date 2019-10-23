@@ -1,3 +1,4 @@
+import { StoreFirstGuard } from './storeFirst.guard';
 import { StoreModule } from './store/store.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     StoreModule
   ],
-  providers: [],
+  providers: [StoreFirstGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
