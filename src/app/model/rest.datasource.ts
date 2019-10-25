@@ -23,7 +23,7 @@ export class RestDataSource {
     }
 
     saveOrder(order: Order): Observable<Order> {
-        return this.http.post<Order>(this.baseUrl + "order", order);
+        return this.http.post<Order>(this.baseUrl + "orders", order);
     }
 
     authenticate(user: string, pass: string): Observable<boolean> {
@@ -44,7 +44,7 @@ export class RestDataSource {
     }
 
     deleteProduct(id: number): Observable<Product> {
-        return this.http.delete<Product>(`${this.baseUrl}products/${product.id}`, this.getOptions());
+        return this.http.delete<Product>(`${this.baseUrl}products/${id}`, this.getOptions());
     }
 
     getOrders(): Observable<Order[]> {
