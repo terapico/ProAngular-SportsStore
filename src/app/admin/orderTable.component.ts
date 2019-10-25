@@ -23,4 +23,5 @@ export class OrderTableComponent {
     delete(id: number) {
         this.repository.deleteOrder(id);
     }
+
 }
